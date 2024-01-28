@@ -156,7 +156,7 @@
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="hidden md:hidden xl:flex absolute bottom-0 -left-[250px]"
+          className="hidden md:hidden xl:flex absolute bottom-0 -left-[200px]"
         >
           <Avatar />
         </motion.div>

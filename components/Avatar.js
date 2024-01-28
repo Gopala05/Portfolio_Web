@@ -6,7 +6,7 @@ const Avatar = () => {
       <Image
         src={"/GK_.png"}
         alt="Picture"
-        width={600}
+        width={500}
         height={500}
         className="translate-z-0 w-full h-full"
       />
