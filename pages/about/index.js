@@ -137,8 +137,8 @@
     },
   ];
 
-  import Avatar from "../../components/Avatar";
-  import Circles from "../../components/Circles";
+import AboutAvatar from "../../components/AboutAvatar";  
+import Circles from "../../components/Circles";
 
   import { motion } from "framer-motion";
   import { fadeIn } from "../../variants";
@@ -148,20 +148,12 @@
   const About = () => {
     const [index, setIndex] = useState(0);
     return (
-      <div className="h-full bg-primary/30 py-36 text-center xl:text-left overflow-y-auto">
+      <div className="h-full bg-primary/30 py-36 text-center xl:text-left overflow-y-auto overflow-x-hidden">
         <Circles />
 
-        <motion.div
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="hidden md:hidden xl:flex absolute bottom-0 -left-[200px]"
-        >
-          <Avatar />
-        </motion.div>
+        <AboutAvatar/>
         <div
-          className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:ml-[300px]"
+          className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:ml-[350px]"
           // style={{ marginRight: 0, marginLeft: 300}}
         >
           <div className="flex flex-col justify-center ">
