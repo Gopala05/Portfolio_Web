@@ -1,5 +1,5 @@
-const Testimonials = () => {
-  return <div>Testimonials</div>;
-};
+// const Testimonials = () => {
+//   return <div>Testimonials</div>;
+// };
 
-export default Testimonials;
+// export default Testimonials;
