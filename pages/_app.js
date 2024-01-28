@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Provider } from "react-redux";
-import store from "../pages/store";
+import store from "../redux/store";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
