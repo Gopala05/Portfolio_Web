@@ -14,6 +14,7 @@ https://main--frabjous-mooncake-48fb11.netlify.app/
 
 Welcome to my portfolio repository! This project is built using Next.js, Three.js, and Tailwind CSS. It showcases my skills, projects, and provides an interactive experience for visitors.
 
+<!--
 ## Table of Contents
 - [Demo](#demo)
 - [Features](#features)
@@ -25,9 +26,10 @@ Welcome to my portfolio repository! This project is built using Next.js, Three.j
 - [Deployment](#deployment)
 - [Contribution](#contribution)
 - [License](#license)
+  -->
 
 ## Demo
-Check out the live demo of the portfolio [here](https://your-portfolio-url.com](https://portfolio-web-snowy-ten.vercel.app/)).
+Check out the live demo of the portfolio [here](https://portfolio-web-snowy-ten.vercel.app/).
 
 ## Features
 - Responsive and interactive design
