@@ -52,4 +52,4 @@ Make sure you have Node.js installed on your machine. You can download it [here]
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clone https://github.com/Gopala05/Portfolio_Web.git
