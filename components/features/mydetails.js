@@ -7,7 +7,7 @@ export const mydetailsSlice = createSlice({
       name: "Gopala Krishna V",
       domain1: "Software",
       intro:
-        "I am a versatile tech enthusiast skilled in Web and Android Development, Game Development, Ethical Hacking, and IoT.",
+        "I am a versatile tech enthusiast skilled in Web and Android Development, DevOps, IOT and Web3.",
     },
   },
   reducers: {

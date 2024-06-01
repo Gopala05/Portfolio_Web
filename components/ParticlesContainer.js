@@ -11,7 +11,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-    className="w-full h-full absolute translate-z-0"
+      className="w-full h-full absolute translate-z-0"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -27,42 +27,42 @@ const ParticlesContainer = () => {
           events: {
             onClick: {
               enable: false,
-              mode: 'push',
+              mode: "push",
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: "repulse",
             },
             modes: {
               push: {
-                quantity: 90
-              }
+                quantity: 90,
+              },
             },
             repulse: {
               distance: 200,
-              duration: 0.4
-            }
+              duration: 0.4,
+            },
           },
         },
         particles: {
           color: {
-            value: '#E68E2E',
+            value: "#E68E2E",
           },
           links: {
-            color: '#F5D393',
+            color: "#F5D393",
             distance: 150,
             enable: true,
             opacity: 0.5,
-            width: 1
+            width: 1,
           },
           collisions: {
             enable: true,
           },
           move: {
-            directions: 'none',
+            directions: "none",
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: "bounce",
             },
             random: false,
             speed: 1,
@@ -79,10 +79,10 @@ const ParticlesContainer = () => {
             value: 0.5,
           },
           shape: {
-            type: 'circle',
+            type: "circle",
           },
           size: {
-            value: {min: 1, max:5 },
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,
