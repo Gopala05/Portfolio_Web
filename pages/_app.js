@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { Provider } from "react-redux";
 import store from "../redux/store";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         <AnimatePresence mode="wait">
           <motion.div key={router.route} className="h-full">
             <Transition />
+            <Toaster />
             <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>
