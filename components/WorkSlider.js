@@ -1,108 +1,241 @@
-// data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "Weather App",
-          path: "/Weather_App.jpg",
-        },
-        // {
-        //   title: 'title',
-        //   path: '/thumb2.jpg',
-        // },
-        // {
-        //   title: 'title',
-        //   path: '/thumb3.jpg',
-        // },
-        // {
-        //   title: 'title',
-        //   path: '/thumb4.jpg',
-        // },
-      ],
-    },
-    // {
-    //   images: [
-    //     {
-    //       title: 'title',
-    //       path: '/thumb4.jpg',
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/thumb1.jpg',
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/thumb2.jpg',
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/thumb3.jpg',
-    //     },
-    //   ],
-    // },
-  ],
-};
+"use client";
+
+import {} from "react-icons/fa";
+
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiFlutter,
+  SiAndroidstudio,
+  SiDart,
+  SiFirebase,
+  SiMongodb,
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiExpress,
+  SiNodedotjs,
+  SiRedux,
+  SiSocketdotio,
+  SiDjango,
+  SiAntdesign,
+  SiPostgresql,
+  SiBlockchaindotcom,
+  SiEthereum,
+  SiSolidity,
+  SiAmazonaws,
+  SiMqtt,
+  SiAmazoniam,
+  SiAmazonec2,
+} from "react-icons/si";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-// import { Pagination } from "swiper";
+import { FaLocationArrow } from "react-icons/fa6";
 
-import { BsArrowRight } from "react-icons/bs";
+import { PinContainer } from "./ui/3d-pin";
+import Link from "next/link";
+import { RiNftFill } from "react-icons/ri";
 
-import Image from "next/image";
+// data
+const Projects = [
+  {
+    title: "Chat Application",
+    path: "/Chat_App.png",
+    bg: "/Chat_App.png",
+    width: 250,
+    des: "Real time Chat Application-MERN",
+    tools: [
+      <SiMongodb />,
+      <SiExpress />,
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiTailwindcss />,
+      <SiRedux />,
+      <SiSocketdotio />,
+    ],
+    source: "Deployed on Render",
+    url: "https://chatforever.onrender.com/",
+  },
+  {
+    title: "AWS IOT Core Project",
+    path: "/AWS.jpg",
+    bg: "/AWS.jpg",
+    des: "IOT Communication (Confedential)",
+    width: 250,
+    tools: [
+      <SiReact key="react" />,
+      <SiRedux key="redux" />,
+      <SiAmazonaws key="aws" />,
+      <SiAmazoniam key="iam" />,
+      <SiAmazonec2 key="ec2" />,
+      <SiMqtt key="mqtt" />,
+    ],
+    source: "Deployed on AWS",
+    url: "https://main--frabjous-mooncake-48fb11.netlify.app/",
+  },
+  {
+    title: "Web3",
+    path: "/Web3.png",
+    bg: "/Web3.png",
+    des: "Certificate Validation System",
+    width: 270,
+    tools: [
+      <SiSolidity />,
+      <SiBlockchaindotcom />,
+      <SiEthereum />,
+      <SiMongodb />,
+      <SiNextdotjs />,
+      <SiTailwindcss />,
+      <RiNftFill />,
+    ],
+    source: "GitHub",
+    url: "https://github.com/Gopala05/Synergy-Certificate-Validation--Using-Block-Chain",
+  },
+
+  {
+    title: "Weather App",
+    path: "/Weather_App1.jpg",
+    bg: "/Weather_App.jpg",
+    width: 180,
+    des: "Flutter Based Project",
+    tools: [<SiAndroidstudio />, <SiFlutter />, <SiDart />, <SiFirebase />],
+    source: "GitHub",
+    url: "https://github.com/Gopala05/Flutter_Weather_App",
+  },
+  {
+    title: "CRM Project",
+    path: "/CRM.avif",
+    bg: "/CRM.avif",
+    des: "Real time CRM Project (Confedential)",
+    width: 250,
+    tools: [
+      <SiDjango />,
+      <SiPostgresql />,
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiRedux />,
+      <SiTypescript />,
+      <SiAntdesign />,
+    ],
+    source: "Deployed on Azure",
+    url: "https://main--frabjous-mooncake-48fb11.netlify.app/",
+  },
+  {
+    title: "Tour Management System",
+    path: "/TMS.png",
+    bg: "/TMS.png",
+    des: "DBMS based Project",
+    width: 270,
+    tools: [
+      <SiDjango />,
+      <SiPostgresql />,
+      <SiReact />,
+      <SiNodedotjs />,
+      <SiRedux />,
+      <SiTypescript />,
+      <SiAntdesign />,
+    ],
+    source: "GitHub",
+    url: "https://github.com/Gopala05/Tour-Management_Frontend",
+  },
+];
 
 const WorkSlider = () => {
   return (
     <Swiper
-      spaceBetween={10}
+      cssMode={true}
+      navigation={true}
+      mousewheel={true}
+      keyboard={true}
+      spaceBetween={0}
+      slidesPerView={3}
       pagination={{
         clickable: true,
       }}
-      // modules={{ Pagination }}
-      className="h-[280px] sm:h-[480px]"
+      modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+      className="mySwiper"
     >
-      {workSlides.slides.map((slide, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((image, index) => {
-                return (
-                  <div className="relative rounded-lg overflow-hidden flex
-                  items-center justify-center group " key={index}>
-                    <div className="flex items-center justify-center 
-                    relative overflow-hidden group">
-                      <Image
-                        src={image.path}
-                        width={500}
-                        height={300}
-                        alt="Work Image"
+      <div className="flex flex-wrap xl:h-[20vh] lg:h-[20vh] items-center justify-center p-4 gap-16 mt-10">
+        {Projects.map((item, index) => {
+          return (
+            <SwiperSlide
+              key={index}
+              className="flex xl:p-0 items-center justify-center sm:p-40 sm:pt-0 sm:pr-60"
+            >
+              <div
+                className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+                key={item.id}
+              >
+                <PinContainer
+                  title={item.source}
+                  className="bg-secondary/30 p-2 h-[50vh] w-[20vw]"
+                >
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="relative bg-primary/30 flex items-center justify-center sm:w-96 w-[10vw] lg:w-[19vw] h-[10vh] lg:h-[25vh] overflow-hidden  mb-10">
+                      <div
+                        className="relative w-full h-full overflow-hidden lg:rounded-3xl blur-sm"
+                        style={{ backgroundColor: "#13162D" }}
+                      >
+                        <img src={item.bg} alt="bgimg" />
+                      </div>
+                      <img
+                        src={item.path}
+                        alt="Project Image"
+                        width={item.width}
+                        className="z-10 absolute bottom-0 rounded-3xl"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#00FFFF] to-[#4A22BD]
-                      opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <div className="absolute bottom-0translate-y-full group-hover:-translate-y-10 
-                      group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2text-[13px] tracking-[0.2rem] ">
-                          {/* <div className="delay-100"> LIVE </div> */}
-                          <div className="translate-y-[500%] text-black group-hover:translate-y-0
-                          transition-all duration-300 delay-150" style={{fontWeight: 800 }}> {image.title} </div>
-                          <div className="text-xl translate-y-[500%] text-black
-                          group-hover:translate-y-0 transition-all duration-300
-                          delay-200"><BsArrowRight/></div>
-                        </div>
+                    </div>
+
+                    <h1 className="font-bold lg:text-xl md:text-xl text-base line-clamp-1">
+                      {item.title}
+                    </h1>
+
+                    <p
+                      className="lg:text-sm lg:font-normal font-light text-sm line-clamp-2"
+                      style={{
+                        color: "#BEC1DD",
+                        margin: "1vh 0",
+                      }}
+                    >
+                      {item.des}
+                    </p>
+
+                    <div className="flex items-center justify-between mt-7 mb-3">
+                      <div className="flex items-center">
+                        {item.tools.map((icon, index) => (
+                          <div
+                            key={index}
+                            className="border border-white/[.2] rounded-full bg-black w-8 h-8 flex justify-center items-center"
+                            style={{
+                              transform: `translateX(-${5 * index + 2}px)`,
+                            }}
+                          >
+                            {icon}
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex justify-center items-center">
+                        <FaLocationArrow className="ms-3" color="#CBACF9" />
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </SwiperSlide>
-        );
-      })}
+                  </Link>
+                </PinContainer>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </div>
     </Swiper>
   );
 };
