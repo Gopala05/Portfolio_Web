@@ -143,7 +143,6 @@ const aboutData = [
           <SiZoho key="zoho" />,
         ],
       },
-
       {
         title: "Version Control",
         icons: [<SiGithub key="github" />],
@@ -154,16 +153,20 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Junior Software Developer - Tvast Company",
-        stage: "2023 - Present",
-      },
-      {
-        title: "Junior Software Developer - Rekonsile Company",
-        stage: "2023 - Present",
-      },
-      {
-        title: "Full stack - Xcel Corps Company",
+        title: "DevOps Engineer - Xcel Corps",
         stage: "2024 (1 Month)",
+      },
+      {
+        title: "Junior Software Developer - Tvast IT Solutions",
+        stage: "2023 - Present",
+      },
+      {
+        title: "IOT Edge Node and Gateway - Cranes Varsity",
+        stage: "2023 (1 Month)",
+      },
+      {
+        title: "Python Programming - InternPe",
+        stage: "2023 (1 Month)",
       },
       {
         title: "Youth for Seva - Volunteer + Intern",
@@ -299,7 +302,7 @@ const About = () => {
               after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0"
               >
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={20} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase">Certifications</div>
               </div>

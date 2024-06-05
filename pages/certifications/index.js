@@ -32,7 +32,7 @@ const Certificates = () => {
               className="mx-auto lg:mx-0"
             >
               In my pursuit of excellence and staying ahead in the ever-evolving
-              tech landscape, I have earned over 10 certifications. These
+              tech landscape, I have earned over 20 certifications. These
               certifications highlight my commitment to continuous learning and
               my proficiency in diverse areas of software development, project
               management, and emerging technologies.

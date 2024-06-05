@@ -75,7 +75,7 @@ const Projects = [
       <SiMqtt key="mqtt" />,
     ],
     source: "Deployed on AWS",
-    url: "https://main--frabjous-mooncake-48fb11.netlify.app/",
+    url: "https://gk-portfoio.netlify.app/",
   },
   {
     title: "Web3",
@@ -93,7 +93,7 @@ const Projects = [
       <RiNftFill key="nft" />,
     ],
     source: "GitHub",
-    url: "https://github.com/Gopala05/Synergy-Certificate-Validation--Using-Block-Chain",
+    url: "https://gk-portfoio.netlify.app/",
   },
 
   {

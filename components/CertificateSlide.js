@@ -30,7 +30,7 @@ const CertificateSlide = () => {
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
-              src="./Non_Aca_Cert.jpg"
+              src="/Non_Aca_Cert.jpg"
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -41,7 +41,7 @@ const CertificateSlide = () => {
             <CardItem
               translateZ={20}
               as={Link}
-              href="https://main--frabjous-mooncake-48fb11.netlify.app/"
+              href="https://my-certification.netlify.app/"
               target="__blank"
               className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             >
@@ -70,7 +70,7 @@ const CertificateSlide = () => {
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
-              src="./Aca_Cert.jpg"
+              src="/Aca_Cert.jpg"
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -81,7 +81,7 @@ const CertificateSlide = () => {
             <CardItem
               translateZ={20}
               as={Link}
-              href="https://main--frabjous-mooncake-48fb11.netlify.app/"
+              href="https://my-certification.netlify.app/non-academic"
               target="__blank"
               className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             >
