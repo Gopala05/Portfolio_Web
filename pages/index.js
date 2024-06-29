@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 import ParticlesContainer from "../components/ParticlesContainer";
-import ProjectsBtn from "../components/ProjectsBtn";
+// import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 import HomeDetails from "./homeDetails";
-import ResumeLogo from "../public/resume.png";
+// import ResumeLogo from "../public/resume.png";
 import { RiFileDownloadFill } from "react-icons/ri";
 
 const Home = () => {
@@ -21,11 +21,11 @@ const Home = () => {
         >
           <HomeDetails />
 
-          <div className="flex justify-center xl:hidden relative">
+          {/* <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
-          </div>
-          <div>
-            <button class="Download-button z-10">
+          </div> */}
+          <div className="flex justify-center xl:justify-start">
+            <button className="Download-button z-10">
               <a
                 href="/GK_Resume.pdf"
                 target="_blank"

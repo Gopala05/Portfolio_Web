@@ -46,6 +46,8 @@ import {
   SiMongodb,
   SiPostgresql,
   SiFirebase,
+  SiJenkins,
+  SiKubernetes,
 } from "react-icons/si";
 
 import { RiFlutterLine } from "react-icons/ri";
@@ -106,6 +108,8 @@ const aboutData = [
           <SiDocker key="docker" />,
           <SiElasticsearch key="es" />,
           <SiKibana key="kibana" />,
+          <SiJenkins key="jenkins" />,
+          <SiKubernetes key="kubernetes" />,
         ],
       },
       {
@@ -235,7 +239,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] h2 xl:text-5xl lg:text-5xl md:text-6xl sm:text-6xl"
+            className="max-w-[500px] h2 xl:text-5xl lg:text-5xl text-5xl mt-5 xl:mt-0"
           >
             About <span className="text-accent"> Me </span>
           </motion.h2>
@@ -271,7 +275,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden md:flex mx-auto xl:mx-0 mb-0 max-w-[500px] "
+            className="hidden md:flex mx-auto xl:mx-0 mb-0 max-w-[500px]"
           >
             <div className="flex flex-1 xl:gap-x-9">
               <div
@@ -279,11 +283,11 @@ const About = () => {
               after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0"
               >
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent">
-                  <CountUp start={0.2} end={1} duration={5} /> +
+                  <CountUp start={0.1} end={1} duration={10} /> +
                 </div>
                 <div
                   className="text-xs uppercase tracking-[1px] leading-[1.4] 
-                max-w-[100px]"
+                max-w-[100px] mx-3 xl:mx-0"
                 >
                   Years of experience
                 </div>
@@ -295,7 +299,7 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase">Projects</div>
+                <div className="text-xs uppercase mx-3 xl:mx-0">Projects</div>
               </div>
               <div
                 className="relative flex-1 after:w-[1px] 
@@ -304,7 +308,9 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent">
                   <CountUp start={0} end={20} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase">Certifications</div>
+                <div className="text-xs uppercase mx-3 xl:mx-0">
+                  Certifications
+                </div>
               </div>
             </div>
           </motion.div>
@@ -315,7 +321,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-y-hidden"
+          className="flex flex-col w-full h-full mt-3 xl:mt-0 xl:max-w-[48%] xl:overflow-y-hidden overflow-y-scroll"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((items, itemIndex) => {

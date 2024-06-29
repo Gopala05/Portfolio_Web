@@ -87,7 +87,7 @@ const Contact = () => {
               initial="hidden"
               animate="show"
               exit="hide"
-              className="h2 text-center mb-12"
+              className="h2 text-center my-12"
             >
               Lets <span className="text-accent"> Connect. </span>
             </motion.h2>
@@ -103,32 +103,32 @@ const Contact = () => {
                   type="text"
                   placeholder="Name"
                   value={name}
-                  class="input input-bordered bg-transparent input-accent placeholder:text-white"
+                  className="input input-bordered bg-transparent input-accent placeholder:text-white"
                   onChange={(e) => setName(e.target.value)}
                 />
                 <input
                   type="text"
                   placeholder="Email"
                   value={email}
-                  class="input input-bordered bg-transparent input-accent placeholder:text-white"
+                  className="input input-bordered bg-transparent input-accent placeholder:text-white"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <label class="input input-bordered bg-transparent input-accent flex items-center gap-2">
+              <label className="input input-bordered bg-transparent input-accent flex items-center gap-2">
                 <input
                   type="text"
-                  class="grow placeholder:text-white"
+                  className="grow placeholder:text-white"
                   placeholder="Subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                 />
-                <span class="badge badge-info">Optional</span>
+                <span className="badge badge-info">Optional</span>
               </label>
 
               <textarea
                 placeholder="Message"
                 value={message}
-                class="textarea textarea-accent bg-transparent placeholder:text-white"
+                className="textarea textarea-accent bg-transparent placeholder:text-white"
                 onChange={(e) => setMessage(e.target.value)}
               />
               <button
