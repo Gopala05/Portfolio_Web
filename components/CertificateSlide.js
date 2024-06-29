@@ -10,8 +10,8 @@ import Image from "next/image";
 
 const CertificateSlide = () => {
   return (
-    <div className="flex flex-row gap-x-10 ">
-      <CardContainer>
+    <div className="flex flex-row gap-x-10 items-center">
+      <CardContainer className="xl:w-full xl:h-full h-10 w-80">
         <CardBody className="bg-gray-50 p-8 xl:w-[30vw] xl:h-[60vh] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] h-auto rounded-xl border  ">
           <CardItem
             translateZ="50"
@@ -37,7 +37,7 @@ const CertificateSlide = () => {
               alt="Certificate"
             />
           </CardItem>
-          <div className="flex w-full justify-end items-center mt-7">
+          <div className="flex w-full justify-end items-center xl:mt-7">
             <CardItem
               translateZ={20}
               as={Link}
@@ -51,7 +51,7 @@ const CertificateSlide = () => {
         </CardBody>
       </CardContainer>
 
-      <CardContainer>
+      <CardContainer className="xl:w-full xl:h-full w-80">
         <CardBody className="bg-gray-50 p-8 xl:w-[30vw] xl:h-[60vh] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] h-auto rounded-xl border  ">
           <CardItem
             translateZ="50"
@@ -77,7 +77,7 @@ const CertificateSlide = () => {
               alt="Certificate"
             />
           </CardItem>
-          <div className="flex w-full justify-end items-center mt-7">
+          <div className="flex w-full justify-end items-center xl:mt-7">
             <CardItem
               translateZ={20}
               as={Link}
