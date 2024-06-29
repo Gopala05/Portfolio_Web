@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -9,7 +10,6 @@ import {
   SiFirebase,
   SiMongodb,
   SiTypescript,
-  SiJavascript,
   SiReact,
   SiExpress,
   SiNodedotjs,
@@ -149,7 +149,39 @@ const Projects = [
   },
 ];
 
+// Breakpoints for different screen sizes
+const breakpoints = {
+  xl: 1280,
+  lg: 1024,
+  md: 768,
+  sm: 640,
+};
+
 const WorkSlider = () => {
+  const [screenSize, setScreenSize] = useState('xl');
+
+  // Function to update screenSize state based on window.innerWidth
+  const handleResize = () => {
+    const width = window.innerWidth;
+    if (width >= breakpoints.xl) {
+      setScreenSize('xl');
+    } else if (width >= breakpoints.md) {
+      setScreenSize('md');
+    } else {
+      setScreenSize('sm');
+    }
+  };
+
+  // UseEffect hook to handle resizing of window
+  useEffect(() => {
+    // Add event listener to handle window resize
+    window.addEventListener('resize', handleResize);
+    // Call handleResize on initial load
+    handleResize();
+    // Clean up event listener when component unmounts
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Swiper
       cssMode={true}
@@ -157,14 +189,16 @@ const WorkSlider = () => {
       mousewheel={true}
       keyboard={true}
       spaceBetween={0}
-      slidesPerView={3}
+      slidesPerView={
+        screenSize === 'xl' ? 3 : 1
+      }
       pagination={{
         clickable: true,
       }}
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className="mySwiper"
     >
-      <div className="flex flex-wrap xl:h-[20vh] lg:h-[20vh] items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap xl:h-[20vh] lg:h-[20vh] items-base justify-center p-4 gap-16 mt-10">
         {Projects.map((item, index) => {
           return (
             <SwiperSlide
@@ -172,19 +206,19 @@ const WorkSlider = () => {
               className="flex xl:p-0 items-center justify-center sm:p-40 sm:pt-0 sm:pr-60"
             >
               <div
-                className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+                className="lg:min-h-[32.5rem] h-[25rem] mb-10 flex items-center justify-center xl:w-[80vw]"
                 key={item.id}
               >
                 <PinContainer
                   title={item.source}
-                  className="bg-secondary/30 p-2 h-[50vh] w-[20vw]"
+                  className="bg-secondary/30 p-2 xl:h-[50vh] xl:w-[20vw]"
                 >
                   <Link
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="relative bg-primary/30 flex items-center justify-center sm:w-96 w-[10vw] lg:w-[19vw] h-[10vh] lg:h-[25vh] overflow-hidden  mb-10">
+                    <div className="relative bg-primary/30 flex items-center justify-center lg:w-[19vw] lg:h-[25vh] overflow-hidden  mb-10">
                       <div
                         className="relative w-full h-full overflow-hidden lg:rounded-3xl blur-sm"
                         style={{ backgroundColor: "#13162D" }}
@@ -194,7 +228,7 @@ const WorkSlider = () => {
                       <img
                         src={item.path}
                         alt="Project Image"
-                        width={item.width}
+                        width={screenSize === "xl" ? item.width : "130vw"}
                         className="z-10 absolute bottom-0 rounded-3xl"
                       />
                     </div>

@@ -12,15 +12,14 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="flex flex-col gap-x-8">
           <div
-            className="text-center flex flex-col mb-4
-          xl:mb-0"
+            className="text-center flex flex-col"
           >
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-12 xl:text-5xl"
+              className="h2 xl:mt-12 xl:text-5xl mb-0"
             >
               My <span className="text-accent">&nbsp;Projects.</span>
             </motion.h2>
@@ -29,7 +28,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mx-auto text-sm lg:mx-0"
+              className="mx-auto text-sm lg:mx-0 hidden xl:block"
             >
               Throughout my career as a Junior Software Developer, I have worked
               on a diverse range of projects that demonstrate my technical
