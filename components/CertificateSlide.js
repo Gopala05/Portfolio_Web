@@ -10,8 +10,8 @@ import Image from "next/image";
 
 const CertificateSlide = () => {
   return (
-    <div className="flex flex-row gap-x-10 items-center">
-      <CardContainer className="xl:w-full xl:h-full h-10 w-80">
+    <div className="flex flex-col lg:flex-row gap-y-40 gap-x-10 items-center">
+      <CardContainer className="flex flex-grow justify-center flex-col h-10">
         <CardBody className="bg-gray-50 p-8 xl:w-[30vw] xl:h-[60vh] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] h-auto rounded-xl border  ">
           <CardItem
             translateZ="50"
@@ -24,11 +24,11 @@ const CertificateSlide = () => {
           <CardItem
             as="p"
             translateZ="60"
-            className="text-neutral-500 w-full text-center text-sm max-w-sm mt-2 dark:text-neutral-300"
+            className="text-neutral-500 w-full text-center text-sm mt-2 dark:text-neutral-300"
           >
             Certifications from or related to Academic
           </CardItem>
-          <CardItem translateZ="100" className="w-full mt-4">
+          <CardItem translateZ="100" className="w-full hidden lg:block mt-4">
             <Image
               src="/Non_Aca_Cert.jpg"
               height="1000"
@@ -37,13 +37,13 @@ const CertificateSlide = () => {
               alt="Certificate"
             />
           </CardItem>
-          <div className="flex w-full justify-end items-center xl:mt-7">
+          <div className="flex w-full justify-center lg:justify-end items-center xl:mt-7">
             <CardItem
               translateZ={20}
               as={Link}
               href="https://my-certification.netlify.app/"
               target="__blank"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              className="px-4 mt-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             >
               Check now →
             </CardItem>
@@ -51,7 +51,7 @@ const CertificateSlide = () => {
         </CardBody>
       </CardContainer>
 
-      <CardContainer className="xl:w-full xl:h-full w-80">
+      <CardContainer className="flex flex-grow justify-center flex-col h-10">
         <CardBody className="bg-gray-50 p-8 xl:w-[30vw] xl:h-[60vh] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] h-auto rounded-xl border  ">
           <CardItem
             translateZ="50"
@@ -64,11 +64,11 @@ const CertificateSlide = () => {
           <CardItem
             as="p"
             translateZ="60"
-            className="text-neutral-500 w-full text-center text-sm max-w-sm mt-2 dark:text-neutral-300"
+            className="text-neutral-500 w-full text-center text-sm mt-2 dark:text-neutral-300"
           >
             Certifications from or related to Non-Academics
           </CardItem>
-          <CardItem translateZ="100" className="w-full mt-4">
+          <CardItem translateZ="100" className="w-full hidden lg:block mt-4">
             <Image
               src="/Aca_Cert.jpg"
               height="1000"
@@ -77,13 +77,13 @@ const CertificateSlide = () => {
               alt="Certificate"
             />
           </CardItem>
-          <div className="flex w-full justify-end items-center xl:mt-7">
+          <div className="flex w-full justify-center lg:justify-end items-center xl:mt-7">
             <CardItem
               translateZ={20}
               as={Link}
               href="https://my-certification.netlify.app/non-academic"
               target="__blank"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              className="px-4 mt-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             >
               Check now →
             </CardItem>
