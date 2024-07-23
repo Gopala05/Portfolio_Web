@@ -28,7 +28,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mx-auto text-sm lg:mx-0 hidden xl:block"
+              className="mx-auto text-sm mt-5 lg:mx-0 hidden lg:block"
             >
               Throughout my career as a Junior Software Developer, I have worked
               on a diverse range of projects that demonstrate my technical

@@ -9,7 +9,7 @@ const Certificates = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto">
+      <div className="container flex justify-center h-full mx-auto">
         <div className="flex flex-col gap-x-8">
           <div className="text-center flex flex-col mt-5 mb-0 justify-center xl:mb-0 xl:mt-0">
             <motion.h2
@@ -17,7 +17,7 @@ const Certificates = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 text-5xl xl:mt-8 mt-10"
+              className="h2 text-4xl lg:text-5xl xl:mt-8"
             >
               My <span className="text-accent">Certifications.</span>
             </motion.h2>
@@ -26,7 +26,7 @@ const Certificates = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mx-auto lg:mx-0 hidden xl:block"
+              className="mx-auto lg:mx-0 hidden lg:block"
             >
               In my pursuit of excellence and staying ahead in the ever-evolving
               tech landscape, I have earned over 20 certifications. These
@@ -40,7 +40,7 @@ const Certificates = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:w-full m-0 flex justify-center"
+            className="xl:w-full m-10 lg:m-0 lg:mt-10 h-full flex justify-center"
           >
             <CertificateSlide />
           </motion.div>
