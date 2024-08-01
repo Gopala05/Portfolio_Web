@@ -34,7 +34,7 @@ function AboutAvatar() {
       `}</style>
 
       <Image
-        src={"/GK_.png"}
+        src={"/GK_1.png"}
         alt="Picture"
         width={500}
         height={600}
